@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatPhotoApp</title>
+</head>
+
+<body>
+    <main> <!--Here we opened a main element, we must remember to use only 1 for document-->
+        <h1>CatPhotoApp</h1>
+        <section><!--We opened a section element to organize the main information-->
+            <h2>Cat Photos</h2>
+            <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute
+                    cats</a> online!</p>
+            <p>See more <a href="https://freecatphotoapp.com" target="_blank" rel="noopener noreferrer">cat photos</a>
+                in our gallery.</p>
+            <!--In the last anchor element we set the target_blank attribute, that allows us to open the link in a new tab-->
+            <a href="https://freecatphotoapp.com"><img
+                    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+                    alt="A cute orange cat lying on its back"></a>
+        </section>
+        <section><!--We opened another one to organize Lists-->
+            <h2>Cat Lists</h2>
+            <h3>Things cats love:</h3>
+            <ul><!--The ul element allows us to create an unordered list-->
+                <li>cat nip</li><!--We use the li element to create the elements of the list-->
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <figure><!--The figure element allows us agroup related content such as videos, images or ilustrations-->
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+                    alt="A slice of lasagna on a plate.">
+                <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                <!--The em element emphasizes the words we want-->
+            </figure>
+            <h3>Top 3 things cats hate:</h3>
+            <ol><!--The ol element allows us to create an ordered list-->
+                <li>flea treatment</li><!--The same as the ul we use the li to create elements of the list-->
+                <li>thunder</li>
+                <li>other cats</li>
+            </ol>
+            <figure>
+                <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+                    alt="Five cats looking around a field.">
+                <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+                <!--The strong element bolds thw words we want-->
+            </figure>
+        </section>
+        <section><!--We use another section element because we are going to create a form-->
+            <h2>Cat Form</h2>
+            <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!--The action attribute indicates where the results are going-->
+                <fieldset>
+                    <!--The fieldset allows us to agroup elements such as labels, inputs, we can use the legend element inside of the fieldset-->
+                    <legend>Is your cat an indoor or outdoor cat?</legend>
+                    <!--We use the legend to create a short description about the form-->
+                    <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked>
+                        Indoor<!--The input element allows us to create a form control, in this case we use the radio type to create a radio button, we can use a radiobutton, checkbox or even just text-->
+                        <!--Is important to remark the use of attributes such as: type where we declare the behave of the input, the id, the name and the value is important to analyze the info that the user is going to send-->
+                        <!-- 
+                    Using labels in forms is important for several reasons:
+
+                    1. Accessibility: Labels improve accessibility for users who rely on screen readers. Screen readers read out the label when the user focuses on the corresponding input field, providing context and instructions.
+
+                    2. Usability: Labels make forms easier to understand and use. They provide clear instructions about what information is required in each input field, reducing user errors.
+
+                    3. Clickable Area: Labels increase the clickable area for form elements. When a label is associated with an input field, clicking the label will focus the input field, making it easier for users to interact with the form.
+
+                    4. SEO: Proper use of labels can improve the semantic structure of your HTML, which can be beneficial for search engine optimization (SEO).
+
+                    5. Consistency: Using labels ensures a consistent user experience across different browsers and devices.
+
+                    Overall, labels are a best practice in form design that enhance accessibility, usability, and overall user experience.
+                    -->
+                        <label><input type="radio" name="indoor-outdoor" id="indoor" value="outdoor"> Outdoor</label>
+                        <!--We set the id's value the same for the radio buttons, so that allow us to choose only one option-->
+                </fieldset>
+                <fieldset>
+                    <legend>What is your cat's personality?</legend>
+                    <input type="checkbox" name="personality" id="loving" value="loving" checked> <label
+                        for="loving">Loving</label>
+                    <input type="checkbox" name="personality" id="lazy" value="lazy"> <label for="lazy">Lazy</label>
+                    <input type="checkbox" name="personality" id="energetic" value="energetic"> <label
+                        for="energetic">Energetic</label>
+                    <!-- 
+                    The "for" attribute in the <label> tag is used to bind the label to a specific form element. 
+                    When the label is clicked, it will focus or activate the associated form element, 
+                    which is identified by the value of the "for" attribute matching the "id" of the form element.
+
+                    Setting the "name" attribute to the same value for all checkboxes groups them together. 
+                    This allows the form to send all selected values as an array when submitted, 
+                    enabling the server to process multiple selections under a single field name.
+                    -->
+                </fieldset>
+                <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+                <!--The input element with the type text allows us to create a text field, the placeholder attribute allows us to set a hint for the user, and finally the required attribute wont allow the user to send blank info-->
+                <button type="submit">Submit</button>
+                <!--The button element allows us to create a clickable button, the type attribute allows us to set the behave of the button, in this case we set it to submit to send the info-->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+</body>
+
+</html>
