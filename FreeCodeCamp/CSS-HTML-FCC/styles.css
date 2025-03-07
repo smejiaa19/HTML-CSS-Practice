@@ -1,0 +1,96 @@
+body {
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.established { /*Here we style the established class*/
+    font-style: italic;
+}
+
+h1, h2, p { /*Here we style the h1, h2 and p at the same time using comas.*/
+    text-align: center;
+}
+
+.menu { /*Here we style the menu class*/
+    width: 80%;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    max-width: 500px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+}
+
+.bottom-line {
+    margin-top: 25px;
+}
+
+h1,h2 {
+    font-family: Impact, serif;
+}
+
+.item p { /*Here we style the item class in the p elements*/
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.flavor, .dessert { /*Here we style the flavor and dessert classes*/
+    text-align: left;
+    width: 75%;
+}
+
+.price {
+    text-align: right;
+    width: 25%;
+}
+
+/*FOOTER*/
+
+footer {
+    font-size: 14px;
+}
+
+.address {
+    margin-bottom: 5px;
+}
+
+a {
+    color: black;
+}
+
+a:visited { /*Here we are using the pseudoclasses, here we are saying when the link have been visited the color will turn black*/
+    color: black;
+}
+
+a:hover { /*Here we are saying that when the user is placing the mouse in the link it will turn brown color*/
+    color: brown; 
+}
+
+a:active {
+    color: brown; /*Here we are saying that when the user is clicking and holding the link the color will turn brown*/
+}
